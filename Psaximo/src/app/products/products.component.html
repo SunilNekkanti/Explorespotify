@@ -1,0 +1,13 @@
+<h2>Products</h2>
+<div  *ngIf = "products.length == 0" >
+ 
+ No Products to display.
+
+</div>
+<ul class="list-unstyled" *ngIf = "products.length > 0">
+  <li *ngFor = "let product of products">
+
+    <app-product [data] = "product"></app-product>
+
+  </li>
+</ul>

@@ -1,0 +1,92 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-4 col-md-offset-4">
+
+        <h4>Register</h4>
+
+        <form #userForm = "ngForm" (ngSubmit)="onSubmit()">
+          <div class="form-group">
+            <label for="firstName">First Name</label>
+            <input type="text" class="form-control" 
+                  id="firstName"
+                   [(ngModel)]="model.firstName"  name= "firstName" 
+                   placeholder="John"
+                   #firstName="ngModel"
+                   required
+                   minlength="3"/>
+            <div class="text-danger" *ngIf="firstName.touched && firstName.errors">
+                <div *ngIf="firstName.errors.required">
+                  First Name is required.
+                </div>
+                <div *ngIf="firstName.errors.minlength">
+                  First Name should be atleast 3 characters
+                </div>
+
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="lastName">Last Name</label>
+            <input type="text" class="form-control" 
+                  id="lastName" placeholder="Doe"
+                  [(ngModel)]="model.lastName"  name= "lastName"
+                  #lastName="ngModel"
+                  required
+                  minlength="3"
+                  />
+            <div class="text-danger" *ngIf="lastName.touched && lastName.errors">
+                <div *ngIf="lastName.errors.required">
+                  Last Name is required.
+                </div>
+                <div *ngIf="lastName.errors.minlength">
+                  Last Name should be atleast 3 characters
+                </div>
+
+            </div>
+          </div>
+          <div class="form-group">
+          <label for="email">Email</label>
+          <input type="email" class="form-control" 
+                 id="email" placeholder="john.doe@gmail.com"
+                 [(ngModel)]="model.email"  name= "email"
+                 #email="ngModel"
+                 required
+                 />
+            <div class="text-danger" *ngIf="email.touched && email.errors">
+                <div *ngIf="email.errors.required">
+                  Email is required.
+                </div>
+
+            </div>
+          </div>
+           <div class="form-group">
+          <label for="country">Country</label>
+       
+          <select class="form-control" id="country" 
+                  [(ngModel)]="model.country"  name= "country"
+                  #country="ngModel">
+
+              <option *ngFor="let country of countries">
+
+                {{ country }}
+
+              </option>
+          </select>
+          </div>
+
+          <button type="submit" [disabled] ="!userForm.valid" class="btn btn-default">Submit</button>
+        </form>
+        <div [hidden]="!submitted">
+
+          {{model.firstName}} ;
+          
+          {{model.lastName}} ;
+
+          {{model.email}} ;
+
+          {{model.country}}
+
+        </div>
+    </div>
+  </div>
+
+</div>
