@@ -2,6 +2,8 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
+import { ReactiveFormsModule } from '@angular/forms'
+
 
 import { AppComponent } from './app.component';
 import { AdvertisementsComponent } from './advertisements/advertisements.component';
@@ -11,6 +13,7 @@ import { ProductsComponent } from './products/products.component';
 import { TrucatePipe } from './pipes/trucate.pipe';
 import { JumbotronComponent } from './jumbotron/jumbotron.component';
 import { UserFormComponent } from './user-form/user-form.component';
+import { LoginComponent } from './login/login.component';
 
 @NgModule({
   declarations: [
@@ -21,12 +24,14 @@ import { UserFormComponent } from './user-form/user-form.component';
     ProductsComponent,
     TrucatePipe,
     JumbotronComponent,
-    UserFormComponent
+    UserFormComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
-    HttpModule
+    HttpModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

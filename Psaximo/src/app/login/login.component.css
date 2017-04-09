@@ -1,0 +1,25 @@
+.container{
+
+    padding-top : 70px;
+    font-family:Open Sans,Helvetica Neue,Helvetica,Arial,sans-serif;
+}
+.btn{
+
+    height: 44px;
+    font-size:  18px;
+    border-radius: 1px;
+}
+.btn-primary{
+
+    background-color: #17aa1c;
+    color: #ffffff;
+    border-color: transparent;
+}
+
+input[type=email], input[type=password]{
+
+    font-size:  18px;
+    height: 44px;
+    border-radius: 5px;
+}
+
