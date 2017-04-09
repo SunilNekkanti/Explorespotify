@@ -4,3 +4,5 @@ declare var module: {
 };
 
 declare var urljoin : any;
+
+declare var addnumbers : any

@@ -19,10 +19,12 @@
       "testTsconfig": "tsconfig.spec.json",
       "prefix": "app",
       "styles": [
-        "styles.css"
+        "styles.css",
+        "../node_modules/bootstrap/dist/css/bootstrap.css"
       ],
       "scripts": [
-        "../node_modules/url-join/lib/url-join.js"
+        "../node_modules/url-join/lib/url-join.js",
+        "../customscripts/add.js"
       ],
       "environmentSource": "environments/environment.ts",
       "environments": {

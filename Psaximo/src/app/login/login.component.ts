@@ -21,6 +21,8 @@ export class LoginComponent implements OnInit {
   constructor(fb : FormBuilder, loginService : LoginService ) { 
 
     console.log(urljoin(this.url1,this.url2))
+
+    console.log(addnumbers(2,3))
    
     this._loginService = loginService;
 
