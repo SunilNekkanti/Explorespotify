@@ -3,10 +3,6 @@ sudo: required
 
 language: node_js
 
-env:
-  global:
-    - DBUS_SESSION_BUS_ADDRESS=/dev/null
-
 matrix:
   fast_finish: true
   allow_failures:
