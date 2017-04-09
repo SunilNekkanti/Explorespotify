@@ -15,7 +15,12 @@ export class LoginComponent implements OnInit {
 
   private _loginService;
 
+  url1 : string = "http://ajboggs.com";
+  url2 : string = "/products/2"
+
   constructor(fb : FormBuilder, loginService : LoginService ) { 
+
+    console.log(urljoin(this.url1,this.url2))
    
     this._loginService = loginService;
 
