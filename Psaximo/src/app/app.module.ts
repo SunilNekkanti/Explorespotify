@@ -14,6 +14,7 @@ import { TrucatePipe } from './pipes/trucate.pipe';
 import { JumbotronComponent } from './jumbotron/jumbotron.component';
 import { UserFormComponent } from './user-form/user-form.component';
 import { LoginComponent } from './login/login.component';
+import { SearchComponent } from './search/search.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import { LoginComponent } from './login/login.component';
     TrucatePipe,
     JumbotronComponent,
     UserFormComponent,
-    LoginComponent
+    LoginComponent,
+    SearchComponent
   ],
   imports: [
     BrowserModule,

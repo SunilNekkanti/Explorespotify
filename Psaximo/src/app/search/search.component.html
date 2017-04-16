@@ -1,0 +1,57 @@
+<div class="container">
+
+<div class="row">
+
+  <div class="col-md-8">
+
+      <div class="input-group">
+    
+        <span class="input-group-addon" id="basic-addon1"><i class="glyphicon glyphicon-search"></i></span>
+        <input type="search" [formControl]="searchControl" class="form-control"/>
+
+     </div>
+
+  </div>
+
+</div>
+<div class="row search-results">
+
+  <div class="col-md-8">
+
+    <i class="fa fa-spinner fa-spin fa-3x" aria-hidden="true" *ngIf="isLoading" ></i>
+
+    <p *ngIf="!isLoading && artists.length == 0">No Artists to display.</p>
+
+      <div class="media artis-card" *ngFor = "let artist of artists">
+        
+
+        <div class="media-left">
+          <a href="#">
+            <img class="media-object artist-img" [src]="artist.images[2]?.url" [alt]="artist.name">
+          </a>
+        </div>
+        <div class="media-body">
+          <h4 class="media-heading"> {{ artist.name }}</h4>
+          <small>followers : {{ artist.followers.total }}</small>
+          <small>popularity : {{ artist.popularity }}</small>
+          <p>
+            genres :
+
+            <small><span class="genre" *ngFor = "let genre of artist.genres"> {{ genre }}</span></small>
+
+          </p>
+          
+        </div>
+      </div>
+
+
+
+
+  </div>
+
+</div>
+
+
+ 
+
+</div>
