@@ -4,7 +4,8 @@ import 'rxjs/add/operator/filter';
 import 'rxjs/add/operator/debounceTime'; //Wait for sometime in between request
 import 'rxjs/add/operator/distinctUntilChanged' //check whether value changed, does not respond to keyup, keydown etc..
 import { SearchService } from './search.service';
-import { Observable } from 'rxjs/Rx'
+import { Observable } from 'rxjs/Rx';
+
 
 @Component({
   selector: 'app-search',
@@ -32,9 +33,9 @@ export class SearchComponent implements OnInit {
                         .subscribe(value => {   
 
           this.isLoading = true; 
-          this._searchService.getData(value)
+          this._searchService.getData(encodeURI(value))
                             .subscribe(data => {
-                                                      
+                           console.log(typeof data);
                             this.artists = data.artists.items;
                             this.isLoading = false;
 

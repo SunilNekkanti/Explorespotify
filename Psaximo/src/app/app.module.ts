@@ -15,6 +15,14 @@ import { JumbotronComponent } from './jumbotron/jumbotron.component';
 import { UserFormComponent } from './user-form/user-form.component';
 import { LoginComponent } from './login/login.component';
 import { SearchComponent } from './search/search.component';
+import { HomeComponent } from './home/home.component';
+import { NotfoundComponent } from './notfound/notfound.component';
+import { Routing } from './app.routing';
+import { ArtistComponent } from './artist/artist.component';
+
+import { AuthGuardService } from './auth-guard.service';
+import {LoginService } from './login/login.service';
+import { PreventUnsavedChangesGuardService } from './prevent-unsaved-changes-guard.service'
 
 @NgModule({
   declarations: [
@@ -27,15 +35,24 @@ import { SearchComponent } from './search/search.component';
     JumbotronComponent,
     UserFormComponent,
     LoginComponent,
-    SearchComponent
+    SearchComponent,
+    HomeComponent,
+    NotfoundComponent,
+    ArtistComponent,
   ],
   imports: [
     BrowserModule,
     FormsModule,
     HttpModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    Routing
   ],
-  providers: [],
+  providers: [
+    LoginService,
+    AuthGuardService,
+    PreventUnsavedChangesGuardService
+
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

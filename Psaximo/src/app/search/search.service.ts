@@ -12,7 +12,7 @@ export class SearchService {
    getData(searchStr : string){
 
     return this._http.get("https://api.spotify.com/v1/search?q=" + searchStr + "&type=artist")
-                     .map(res => res.json());
+                     .map(res =>  res.json());
 
    }
 

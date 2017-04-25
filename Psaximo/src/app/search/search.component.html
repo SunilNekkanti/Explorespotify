@@ -6,8 +6,9 @@
 
       <div class="input-group">
     
-        <span class="input-group-addon" id="basic-addon1"><i class="glyphicon glyphicon-search"></i></span>
+        <span class="input-group-addon" id="basic-addon1">Artist</span>
         <input type="search" [formControl]="searchControl" class="form-control"/>
+        <span class="input-group-addon" id="basic-addon1"><i class="glyphicon glyphicon-search"></i></span>
 
      </div>
 
@@ -26,7 +27,7 @@
         
 
         <div class="media-left">
-          <a href="#">
+          <a [routerLink]="['artist',artist.id,artist.name]">
             <img class="media-object artist-img" [src]="artist.images[2]?.url" [alt]="artist.name">
           </a>
         </div>

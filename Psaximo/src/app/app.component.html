@@ -1,16 +1,32 @@
-<!--<bs-jumbotron>
-
-    <div class="heading">
-App Component heading
-
+<nav class="navbar navbar-default">
+  <div class="container">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" routerLink ="">Psaximo</a>
     </div>
-    <div class="body">
-App Component bocy
 
-    </div>
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+        <li [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:true}" ><a routerLink ="" >Home </a></li>
+        <li [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:true}" ><a routerLink ="/spotify">Spotify </a></li>
+      </ul>
+       <ul class="nav navbar-nav navbar-right">
+         <li [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:true}" ><a routerLink ="/login">Login</a></li>  
+         <li [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:true}" ><a routerLink ="/signup">Sign Up </a></li>    
+      </ul>
 
-</bs-jumbotron>
-<app-products></app-products>-->
-<!--<app-user-form></app-user-form>-->
-<!--<app-login></app-login>-->
-<app-search></app-search>
+    </div><!-- /.navbar-collapse -->
+
+
+
+  </div><!-- /.container-fluid -->
+</nav>
+
+<router-outlet></router-outlet>

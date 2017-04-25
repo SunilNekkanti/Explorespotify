@@ -34,11 +34,15 @@ export class LoginComponent implements OnInit {
   }
 
   ngOnInit() {
+
+    console.log(this._loginService.isLoggedIn);
   }
 
   login(){
 
     var result = this._loginService.login(this.form.controls["email"].value, this.form.controls["password"].value);
+
+    console.log(this._loginService.isLoggedIn);
 
     if(!result){
       this.form.setErrors({ invalidLogin : true});

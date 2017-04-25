@@ -1,7 +1,6 @@
 import { Component } from '@angular/core';
 import {AdvertisementService} from './advertisements/advertisement.service';
 import {ProductsService } from './products/products.service';
-import {LoginService } from './login/login.service';
 import {SearchService} from './search/search.service'
 
 @Component({
@@ -11,8 +10,7 @@ import {SearchService} from './search/search.service'
   providers: [
               AdvertisementService,
               ProductsService,
-              LoginService,
-              SearchService
+              SearchService,
   ]
 })
 export class AppComponent {
